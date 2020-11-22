@@ -52,12 +52,13 @@ function button_on_click(button){
                     }
                 }
                 button.style.backgroundColor = unmarked_color;
-
+                reatatch_node(parseInt(button.id    ));
             }
             //If clicked node is unmarked make it a wall.
             else{
                 walls.push(button);
                 button.style.backgroundColor = wall_color;
+                detatch_node(parseInt(button.id));
             }
         }
     }
@@ -66,7 +67,7 @@ function button_on_click(button){
 function create_grid_buttons(id){
     var button = document.createElement("button");
     button.classList.add("grid-button");
-    button.id = "button" + id;
+    button.id = id;
     button.addEventListener("click", function(){button_on_click(button);});
 
     return button;
@@ -77,7 +78,7 @@ function create_grid_item(id){
     grid_item.classList.add("grid-item");
     grid_item.id = "grid_item" + id;
 
-    var button = create_grid_buttons();
+    var button = create_grid_buttons(id);
 
 
     grid_item.appendChild(button);
