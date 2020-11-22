@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,35 +13,36 @@
 
 
 </head>
+
 <body>
     <h1>Path Finding Grid</h1>
+    <div class="settings">
+        <input type="radio" id="check-start" class="check-draw">
+        <label for="check-start" class="check-draw-label">Start</label>
+        <input type="radio" id="check-end" class="check-draw">
+        <label for="check-end" class="check-draw-label">End</label>
+        <input type="radio" id="check-wall" class="check-draw">
+        <label for="check-wall" class="check-draw-label">Wall</label>
 
-        <div class="settings">
-            <input type="radio" id="check-start" class="check-draw">
-            <label for="check-start">Start</label>
-            <input type="radio" id="check-end" class="check-draw">
-            <label for="check-end">End</label>
-            <input type="radio" id="check-wall" class="check-draw">
-            <label for="check-wall">Wall</label>
+        <label for="grid-size" class="selector-label">Matrix row size:</label>
+        <select name="grid-size-selector" id="grid-size">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+        </select>
+        <script src="/JS/settings.js" type="text/javascript"></script>
+    </div>
 
-            <label for="grid-size">Matrix row size:</label>
-            <select name="grid-size-selector" id="grid-size">
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-                <option value="500">500</option>
-                <option value="1000">1000</option>
-            </select>
-            <script src="/JS/settings.js" type="text/javascript"></script>
-        </div>
-
-        <script>create_grid(20);</script>
+    <script>create_grid(20);</script>
 
     <div id="under-grid">
-    <button id = "reset-button" onclick="create_grid();">Reset</button>
+        <button id="reset-button" onclick="create_grid();">Reset</button>
     </div>
-    
+
 </body>
+
 </html>

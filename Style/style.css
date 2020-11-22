@@ -1,5 +1,5 @@
+
 .grid-container {
-    
     display: inline-grid;
     background-color: #2196F3;
     padding: 10px;
@@ -22,5 +22,17 @@
 
 #under-grid{
   margin: 20px;
+}
+
+.settings{
+  margin: 10px;
+}
+
+.check-draw-label{
+  margin-right: 5px;
+}
+
+.selector-label{
+  margin-left: 15px;
 }
   
