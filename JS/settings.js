@@ -1,3 +1,7 @@
+//Sets up the three boxes so that only one can be cecked at the same time.
+//Sets the size of the first grid to 20 and selects the right value in the drop down menue.
+//Sets up the reset of the grid in a new size when the grid size is changed
+
 
     var boxes = document.getElementsByClassName("check-draw");
     var clicked = boxes[0];
